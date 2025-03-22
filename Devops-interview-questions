@@ -1,0 +1,301 @@
+1. Two AWS accounts are there in same organisation. Account A has Ec2 instance and Account B has some tokens.  Need to access the tokens from Ec2 instance. How can achieve the requirement?
+2. Write a Terraform code to create multiple S3 buckets
+3. How you manage statefile
+4. So how are you managing the conflict? State file conflicts
+5. what you did with Jenkins?
+6. How are you integrating the SonarQube with the Jenkins server?
+7. How were you authenticating Jenkins to push docker image to registery?
+8. Have you worked on the Kubernetes?So what deployment strategy are you following?
+9. So how are you implementing the blue green deployment?
+10. Do you know what is HPA?
+11. suppose you deploy one application okay and you found some issue, you wanted to roll back using the kubernetes how you roll back to the particular version, what is the command?
+12. What is the stateful set in the Kubernetes?
+13. Have you worked on the AWS, right? So how many types of IAM policies are there?
+14. what is the difference between the S3 bucket policies and acls?
+15. what is the dynamic auto scaling?
+16. What is the difference between Security groups and NACL?
+17. Commands used for Kubernetes,Docker and Ansible.
+18. Explain Kubernetes Structure, Config Map and Schedular..
+19. How do you troubleshoot Imagepull backoff error ?
+20. Explain installation of prometheus and grafana..
+21. Explain how you build CICD pipeline..
+22. How we monitor cpu metrics in grafana?
+23. How do you grant access to user?
+24. Explain OSI models
+25. How do you did cost optimization in AWS?
+26. Explain on Lambda, CFT, Data Storage, S3 ?
+27. How do you implement best security policies on AWS?
+28. What factor motivates you for this role?
+29. Explain how you did your cloud migration?
+30. What is the use of Route53?
+31. What is Git Stash?
+32. Difference between S3 and EBS
+33. difference between git fetch and git pull
+34. What is the difference between vertical and horizontal scaling?
+35. What is the role of continuous integration?
+36. Can you explain your experience with AWS services?
+37. If we are going to implement a solution for microservices, how would you propose a solution to implement a microservices architecture?
+38. Why do you prefer to start with EKS instead of ECS?
+⦁	Follow-up: What are the capabilities of EKS that make it a better choice over ECS for this project?
+39. How would you configure the Elastic Load Balancer to work against the EKS cluster?
+40. How many public subnets and private subnets are you going to use in the VPC?
+41. In which subnets are you going to locate the ECS cluster and the RDS instances?
+42. How would you handle multiple environments (development, staging, production) using Terraform?
+43. Can you explain the steps involved in creating a CICD pipeline for deploying a Spring Boot application to ECS?
+44. Can you share your experience in handling a large number of servers and your administrative responsibilities?
+⦁	Follow-up: What kind of administrative tasks and responsibilities have you had in managing a large number of servers?
+45. explain kubernetes architecture
+46. have you worked on hybrid environment with AKS/EKS
+47. how do u implement cost optimization on AKS/EKS
+48. Difference between terraform and ansible
+49. have u worked on Prometheus
+50. have you worked on isolated environment
+51. explain ci/cd
+52. what is the advantage of using AKS/EKS rather than using kubernetes.
+53. How do you monitor applications, services, logs, and key metrics in an organization?
+54.  What are the different types of AWS services used for various use cases?
+55.  If there are multiple EC2 instances (5-10), and I need to share files across all, which AWS service should I use?
+56. If I’m using EFS, but it consumes more than data ex: 10 TB, and making costs high, how can I reduce the cost without impacting the data?
+57. What is Auto Scaling Group (ASG) in AWS?
+58.  If an ASG scales up to 10 instances and scales down to 5, but I want to keep a critical instance running without termination, how can I configure that?
+59. How can I move S3 data older than 30 days to Glacier storage to reduce costs?
+60.  What is Route 53, and how does it work?
+61.  If my Route 53 DNS receives traffic from multiple countries, can I redirect traffic based on the country?
+62. Which text editors are commonly used in Linux for file editing?
+63. How do I find and replace all word (e.g.,"abc" with "xyz") inside a file?
+64. If a log file contains multiple client IPs and status codes, how can I count the occurrences of different status codes?
+65. Write a Linux automation script to extract and count HTTP status codes from a log file every 5 minutes.
+66. What is the difference between resource and data in Terraform, and how are they used?
+67. What are the most commonly used 10 Terraform commands and their use cases?
+68. What are the data types in Terraform?
+69. What is a function in Terraform?
+70. What are Terraform modules, and how do they function in an environment?
+71. What is the Terraform lifecycle, and how does it work?
+72. If the Terraform state file is deleted but existing resources need to be managed without recreation, how can we achieve this?
+73. If the Terraform state file is deleted, can we recreate or modify existing resources? If so, how?
+74. How can multiple EC2 instances be created in Terraform without using the count parameter?
+75. What are local and variable definitions in Terraform?
+76. If a child module is used for VPC and EC2 instances in Terraform, how can we deploy the EC2 instance in the VPC’s subnet?
+77. What is the difference between a resource block and a data block in Terraform?
+78. CI/CD (Jenkins, GitHub, Deployment)
+79. What is a CI/CD pipeline, and how does it work?
+80. How can we define a multibranching strategy in Jenkins?
+81. How can we trigger a Jenkins pipeline, and what are the different triggering methods?
+82. What best practices should be followed when integrating GitHub with Jenkins?
+83. What is a hosted stage in Jenkins?
+84. In a Jenkinsfile, if a user wants to change the credentials every time, how can we assign them without hardcoding?
+85. If the code passes in a Jenkins pipeline and gets deployed but later encounters issues in production during testing, how can we resolve the issue?
+86. What challenges have you faced in DevOps operations, and how did you resolve them?
+87. What new frameworks would you suggest to the development team for deployment or code building?
+88. How can we check the code health status in GitHub only?
+89. EKS/Kubernetes
+90. What is a Kubernetes Probe?
+91. What is the difference between a Kubernetes Deployment and a DaemonSet?
+92. How can deployments be managed in Kubernetes?
+93. How do you update the version in EKS, and how will it affect the nodes and pods?
+94. If an application is deployed in Kubernetes and needs to connect to an RDS instance, how can it establish a connection from Pods/Nodes?
+95. How can AWS Lambda logs be stored in an EKS cluster?
+96. How can we upgrade an EKS cluster without affecting application deployments?
+97. If a UI-based application is deployed in Kubernetes and accessible via a URL, how can we deploy it in Kubernetes, and how will the backend API respond?
+98. AWS Services (EC2, RDS, Lambda, S3, IAM, Networking, Security, Cost Optimization, CloudFormation)
+99. EC2 - If an EC2 instance is in a private subnet and needs to send data to an S3 bucket, how can it connect to the S3 bucket?
+100. If a resource is in a private subnet and cannot be accessed, how can it be accessed?
+101. If a PEM key is lost or deleted, how can we connect to an EC2 instance?
+102. RDS & Databases
+103. How is authentication provided to database end users, and how do they access it?
+104. How can a large number of users in IAM be handled?
+105. How can a database server be set up for disaster recovery (DR), and what strategies are commonly used?
+106. How do you choose the right database based on requirements?
+107. How can database backup data be stored in AWS?
+108. How can data transfer costs be reduced if AWS Cost Gateway Hub has led to increased expenses?
+109. How can database costs be optimized for unused data that may be needed in the future, and how can the database be resized to save costs?
+110. If a database needs to be upgraded to the latest version without data loss, how can this be achieved?
+111. How can we optimize and improve the performance of an RDS database?
+112. How does DynamoDB work, how is its cost allocated, and how can we reduce DynamoDB costs?
+113. If an application is deployed in Kubernetes and needs to connect to an RDS instance, how can it establish a connection from Pods/Nodes?
+114. If an RDS database is hosted in a private subnet in AWS and users from an on-premises network need access, how can they connect?
+115. Lambda - What is AWS Lambda invocation, and how does it work?
+116. When should you use AWS Lambda instead of an EC2 instance, and vice versa?
+117. How can a Lambda function be triggered?
+118. S3 & CloudFront - What are the best practices for deploying to Amazon S3?
+119. In CloudFront, S3 is the endpoint. What other endpoints can be used?
+120. IAM & Multi-Account Management
+121. A customer requires a Jenkins server deployed in one AWS account, but the same server’s pipelines need to connect to another account in the same region. How can we establish this connection securely?
+122. If I have a user who needs to access all accounts, how can they use AWS SSO (Single Sign-On)?
+123. I have multiple accounts, and I want to monitor the resources for each user. How can I achieve this?
+124. How can I create a cost optimization budget, set up a dashboard, and monitor costs in AWS? Additionally, how do I set up an AWS Organization and manage IAM within the organization?
+125. Networking (VPC, Load Balancing, API Exposure)
+126. If my web-based application is hosted on a private subnet, how can I access it from outside the subnet?
+127. Can VPC peering be done between accounts? In how many ways can we establish a connection between two networks?
+128. If an NLB has a static IP address and an ALB has a dynamic IP address, can we assign a static IP address to the ALB?
+129. How can an API be exposed to the internet?
+130. CloudFormation - If a CloudFormation stack fails and rolls back after one hour, how can we troubleshoot and resolve the issue?
+131. Cost Optimization & Monitoring
+132. How can data be secured in AWS services?
+133. How can I reduce the size of a logical disk on a Linux machine when it is sometimes unused, to save costs?
+134. DevOps & Security - How can a 404 error in an application be resolved at the application level?
+135. If a UI-based application is deployed in Kubernetes and accessible via a URL, how can we deploy it in Kubernetes, and how will the backend API respond?
+136. How can application vulnerabilities be checked in AWS, and which tools can be used for this?
+137. If a web application is hosted, how can we secure it, and what security measures can we apply without using third-party tools?
+138. Docker - What is a Docker multi-stage build, and how does it work?
+139. What is the difference between the ADD and COPY commands in a Dockerfile, and how do the CMD and ENV commands differ?
+140. Architecture & Design - How can I design a 3-tier architecture in AWS Cloud? What is the process?
+141. How do you design a solution for an AWS microservices application or migrate an application to AWS?
+142. Can you provide a brief overview of microservices architecture?
+143. What is an AWS Landing Zone, and how is it configured in AWS?
+144. What is Databricks, and how does its environment work?
+145. What command is used to initialize a Terraform working directory?
+146. In Kubernetes, what command is used to check the status of all pods in a specific namespace?
+147. Which AWS service is primarily used for object storage?
+148. What is the purpose of a Dockerfile?
+149. What is the difference between a Deployment and a StatefulSet in Kubernetes?
+150. Which tool would you use for infrastructure as code (IaC) when managing AWS resources, and what file format does it use?
+151. In Jenkins, which file is commonly used to define CI/CD pipelines as code?
+152. What Kubernetes object is used to expose a service externally using a DNS name?
+153. Which shell command is used to give execution permission to a shell script?
+154. What is the primary purpose of Prometheus in a cloud environment?
+156. An Ubuntu server on AWS has run out of disk space, how would you handle this situation?
+157. Explain your Roles and Repsonsibilities
+158. Explain about the Branching Startegies
+159. How do you deploy an app with almost Zero downtime?
+160. Challenges faced during moving from on-prem to cloud?
+161. What is your team size?
+162. How do you keep your pipelines secured?
+163. 
+ 
+Ans:
+First one , you can follow terraform documentation and get started, use the aws provider, and follow the aws_instance documentation, to get started , you will find a sample example as a reference. 
+
+Ans:
+For second one, you can follow the ansible documentation, search for yum module or apt module, depending on OS you choose if it is redhat or Ubuntu. it is straightforward, look for module examples, you will get all the required steps.
+
+Tip - if you know the manual steps, you need to just find relevant module and order in which you need to execute those steps with ansible. 
+
+Ans:
+Regarding Packer - it is used to build or create images, provided by hashicorp,  if you are comfortable with terraform, you can find syntax for packer similar to the terraform. Once the images are created using Packer, you can use that AMI wtih the terraform to create a VM. 
+Sequence of steps would be: 
+1. Create a Image using Packer
+2. Use that image with terraform and create the EC2 instance
+3. Install nginx webserver on EC2 instance.
+164. What is Docker?
+165. How to create a Dockerfile?
+166. How to create a Docker container?
+167. How to check logs in Docker?
+168. What is ulimits in Docker?
+169. What is a Parameter Group in a database?
+170. Which command to dump and import a database?
+171. What is AWS CloudFront?
+172. How to map an S3 bucket to a service?
+173. How to hide EFS storage?
+174. What is an ECS Task Definition?
+175. How to deploy an app using AWS ECS?
+176. What is the DNS port number?
+178. How to copy data from one server to another?
+179. Scripted Vs Declarative Pipelines
+180. Git Rebase
+181. Git Pull vs Git Fetch
+182. Docker Layers
+183. K8s Ingress Controler
+184. How do you do automated testing for your IAC
+185. What are best practices for IAC
+186. Statefile in Terraform
+187. Docker container lifecycle
+188. States of Docker container
+189. Blocks of Terraform
+190. Null resource in terraform
+191. Command to Stop and Delete the Docker container
+192. what is terraform taint
+193. terragrunt terraform
+194. Terraform workspace
+195. Current Vs Desired state in terraform
+196. If someone Deleted the terraform manage resources then how do we recover them?
+197. Write a terraform main.tf file to create storage account
+198. How do we add self-hosted agent and use it in our pipeline
+199. Probes in K8s
+200. How do we deploy workloads in master node of K8s
+201. What is Helm
+202. Create a multi-stages docker files
+203. Types of Networks in Docker
+204. Why do we get Imagepullbackoff and Crashloopbackoff
+205. About Maven release
+206. About maven lifecycle
+207. About dependency management tag
+208. how did u manage Kubernetes pods it is on Linux right?
+209. what will happen with maven install
+210. what are the types of branching stratergy u r using
+211. in which directory or in which place ur pom.xml there
+212. What is Ansible and why it’s the most popular tool in DevOps?
+213. How Ansible is different from Puppet?
+214. Can you list down the pros and cons of Ansible?
+215. What is the minimum requirement for Ansible to work?
+216. Explain dynamic inventory and its use cases in Ansible.
+217. Which protocol does Ansible use to communicate with Linux & Windows?
+218. What are Ansible Modules?
+219. What are Ansible Tasks?
+220. Can you explain what is a playbook in Ansible?
+221. How do handlers work in task execution in Ansible?
+222. Can you explain what is Ad-Hoc command in Ansible?
+223. What is Ansible Vault?
+224. Can you explain the concept of Blocks in Ansible?
+225. What are Groups of Groups and Group Variables in Ansible?
+226. Do you have any idea how to turn off the facts in Ansible?
+227. How variables are merged in Ansible?
+228. What are Cache Plugins in Ansible? Any idea how they are enabled?
+229. What are Registered Variables in Ansible?
+230. How Network Module work in Ansible?
+231. How Ansible manages multiple communication protocols?
+Intermediate Ansible Q&A
+232. How to handle different machines needing different user accounts or ports to log in with using Ansible?
+233. How to see a list of all of the ansible variables?
+234. How to create an AWS EC2 key using Ansible?
+235. How to upgrade the Ansible version to the latest version?
+236. How to install a WordPress application inside a Docker container using Ansible?
+237. How to generate encrypted passwords for the user module in Ansible?
+238. How to keep secret data in my playbook in Ansible?
+239. What is the minimum requirement for using Docker modules in Ansible?
+240. How does the Ansible module connect to Docker API? 
+https://muditmathur121.medium.com/ansible-interview-q-a-34333cee7c42
+241. Whats ur organisation current cicd process and tools
+242. What do u know about Cyberark and what and how u r consuming that in ur pipeline
+243. Which scriting language u r aware? and how much confident on that?
+244. What are the services u were used in AWS
+245. If U want to design a infra for high scalablity, how did u do that?
+246. What are NACLs,SecurityGroups,NAT Gateway
+247. About Kubernetes architecture
+248. diff b/w Replicaset and Deployment
+249. About Ansible,Terraform
+250. About ConfigMaps,PV,PVCs
+251. write a Deployment file
+252. Write a Docker File
+253. About multistage Docker file
+254. Which type of Jenkins File u r using? Can u pls Write a Jenkins File?
+255. What is the toughest situation u r faced while implementing anything and what did u learnt from that?
+256. U handled any debug/troubleshoot for kubernetes?
+257. About Prometheus/Grafana
+258. About Fargate
+259. What is lambda functions? did u used any Lambda functions? what did u acheived from that? 
+260. What are the differences between service endpoints and private endpoints, and when should each be used?
+    •    How do VPC peering and transit gateway differ, and in what scenarios would you choose one over the other?
+    •    How do you recover a corrupted Terraform state file?
+    •    How can you restrict different pods from communicating with each other in Kubernetes?
+261. What is the difference between NSG and Firewall.
+262. What is the difference between COPY and ADD command in Docker File.
+263. What is Taint/Tolerent.
+264. What is stateful set.
+265. Architecture of Kubernetes.
+266. Use case of Node-Port and Cluster IP service Type in Kubernetes.
+267. Explain GITHUB Action workflow file.
+268. Difference between entry point and CMD in Docker File.
+269. Can we connect two different VM that are in a different Vnet.
+270. Private Endpoints.
+271. Express route in Azure Cloud.
+272. What is PDB in Kubernetes.
+273. Difference between PV/PVC in Kubernetes.
+274. What is state file in Terraform.
+275. What is lock file in Terraform.
+276. Why Kube-let and Kube-proxy is used for in Kubernetes.
+277. How you can build an Image and push it to the ACR.
+278. How you can use the existing Image into the YAML file to deploy a POD.
+279. What is POD in Kubernetes.
+280. Types of Service in Kubernetes.
+281. Namespaces in Kubernetes.
