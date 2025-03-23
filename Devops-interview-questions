@@ -428,4 +428,11 @@ how to troubleshoot
 379. What is Az App Gateway and how it encrypt http/https traffic
 380. App is down and throwing 503 err code, what steps should be taken
 381. Suppose if you have taken backup of etcd for some how master node got some issue  not getting up  and we have another empty vm 
-can we migrate this etcd or not?will all resource will be available or not
+382. can we migrate this etcd or not?will all resource will be available or not
+383. What is connection drain
+384. Backend.tf file is showing in repo but it is not showing in storage account, what may be the issue
+385. How to login VM if VM has private IP
+386. You have deployed a web app and it was working fine but application went down, and all networking are fine and related ports are open, how to troubleshoot
+387. Types of load balancers
+388. What is Az App Gateway and how it encrypt http/https traffic
+389. App is down and throwing 503 err code, what steps should be taken
