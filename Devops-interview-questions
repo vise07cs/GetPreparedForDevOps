@@ -432,7 +432,47 @@ how to troubleshoot
 383. What is connection drain
 384. Backend.tf file is showing in repo but it is not showing in storage account, what may be the issue
 385. How to login VM if VM has private IP
-386. You have deployed a web app and it was working fine but application went down, and all networking are fine and related ports are open, how to troubleshoot
+386. You have deployed a web app and it was working fine but application went down, and
+all networking are fine and related ports are open,how to troubleshoot
 387. Types of load balancers
 388. What is Az App Gateway and how it encrypt http/https traffic
 389. App is down and throwing 503 err code, what steps should be taken
+390. Introduce yourself 
+391. git commands used in day to day activities
+392. write sample docker file
+393. write sample terraform resource file
+394. Difference between git rebase and git merge
+395. difference between cmd and entry point 
+396. explain about Prometheus and grafana
+397. what will be your approach if pod.yaml failed
+398. explain about blue green deployment strategy 
+399. explain kubernets architecture 
+400. commands used in kubernets 
+401. if application which you are trying to deploy with kubernets got crashed and you are not able to enter into pod what will be your approach 
+402. explain about your project pipeline
+403. have you worked on production deployment activity ?
+404. how frequently do we deploy to production in your current project
+405. Current Company project related questions
+406. What task and activities do you do on daily basis
+407. What is Prometheus, Grafana, Loki
+408. What is Kibana 
+409. How does Prometheus collect metrics
+410. How is Prometheus setup
+411. How is Kibana set up
+412. What is log rotate job and how does it work
+413. What is Jenkins, Ansible 
+414. What is Terraform and how do you use terraform in your project and what all resources have you provisioned 
+415. What are deployments, daemonset, statefulsets
+416. Basic Kuberntes commands
+417. What is Docker and how do you use in your project, Any docker file you have written
+418. What are data sources for Grafana, Kibana
+419. How is traffic routed inside kuberntes clusters
+420. ELB, Ingress questions 
+421. How do you receive alerts in your project and how is it setup
+422. What is pod
+423. What are indices, index in Kibana
+424. Cronjobs
+425. Paas Questions 
+426. How do you handle disk, CPU alerts 
+427. What all Kuberntes issues you have worked on
+428. If any pod/node goes down how do you troubleshoot/monitor that( via cluster and other monitoring tools)
