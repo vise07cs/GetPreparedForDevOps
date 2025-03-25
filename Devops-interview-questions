@@ -488,3 +488,12 @@ in ur projects how many containers u ran? can u give me the use case where can r
 437. did u configure Prometheus and Grafana?
 438. What securities measures/tools u were taken in ur cicd pipeline?
 439. about RBAC
+440. Explain current project 
+441. Asked about k8s ( deployment, services, and configs) 
+442. How to integrate grafana with prometheus
+443. Terraform lifecycle
+444. Service mesh
+445. Pod disruption budget
+446. Git sqash
+447. Git rebase
+448. Purpose of Docker
