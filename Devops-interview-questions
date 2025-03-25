@@ -476,3 +476,15 @@ all networking are fine and related ports are open,how to troubleshoot
 426. How do you handle disk, CPU alerts 
 427. What all Kuberntes issues you have worked on
 428. If any pod/node goes down how do you troubleshoot/monitor that( via cluster and other monitoring tools)
+429. Whats ur organisation current cicd process and tools
+430. How comfortable with AWS and how much rate urself out of 5?
+431. about IAM/Fargate/EC2/Lambda?
+432. Can u pls write a lambda file?
+433. About K8's Architecture and tell me the workflow?
+434. Can u pls write terraform file to provision the Ec2 instance in a public subnet in a VPC?
+435. R u using Dockerfile? u r build the dockerfile by codebuild?
+436. How many containers can run in a pod?
+in ur projects how many containers u ran? can u give me the use case where can run 4-5 containers in a pod?
+437. did u configure Prometheus and Grafana?
+438. What securities measures/tools u were taken in ur cicd pipeline?
+439. about RBAC
