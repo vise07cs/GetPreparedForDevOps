@@ -1,168 +1,328 @@
 1. Two AWS accounts are there in same organisation. Account A has Ec2 instance and Account B has some tokens.  Need to access the tokens from Ec2 instance. How can achieve the requirement?
+
 2. Write a Terraform code to create multiple S3 buckets
+
 3. How you manage statefile
+
 4. So how are you managing the conflict? State file conflicts
+
 5. what you did with Jenkins?
+
 6. How are you integrating the SonarQube with the Jenkins server?
+
 7. How were you authenticating Jenkins to push docker image to registery?
+
 8. Have you worked on the Kubernetes?So what deployment strategy are you following?
+
 9. So how are you implementing the blue green deployment?
+
 10. Do you know what is HPA?
+
 11. suppose you deploy one application okay and you found some issue, you wanted to roll back using the kubernetes how you roll back to the particular version, what is the command?
+
 12. What is the stateful set in the Kubernetes?
+
 13. Have you worked on the AWS, right? So how many types of IAM policies are there?
+
 14. what is the difference between the S3 bucket policies and acls?
+
 15. what is the dynamic auto scaling?
+
 16. What is the difference between Security groups and NACL?
+
 17. Commands used for Kubernetes,Docker and Ansible.
+
 18. Explain Kubernetes Structure, Config Map and Schedular..
+
 19. How do you troubleshoot Imagepull backoff error ?
+
 20. Explain installation of prometheus and grafana..
+
 21. Explain how you build CICD pipeline..
+
 22. How we monitor cpu metrics in grafana?
+
 23. How do you grant access to user?
+
 24. Explain OSI models
+
 25. How do you did cost optimization in AWS?
+
 26. Explain on Lambda, CFT, Data Storage, S3 ?
+
 27. How do you implement best security policies on AWS?
+
 28. What factor motivates you for this role?
+
 29. Explain how you did your cloud migration?
+
 30. What is the use of Route53?
+
 31. What is Git Stash?
+
 32. Difference between S3 and EBS
+
 33. difference between git fetch and git pull
+
 34. What is the difference between vertical and horizontal scaling?
+
 35. What is the role of continuous integration?
+
 36. Can you explain your experience with AWS services?
+
 37. If we are going to implement a solution for microservices, how would you propose a solution to implement a microservices architecture?
+
 38. Why do you prefer to start with EKS instead of ECS?
 ⦁	Follow-up: What are the capabilities of EKS that make it a better choice over ECS for this project?
+
 39. How would you configure the Elastic Load Balancer to work against the EKS cluster?
+
 40. How many public subnets and private subnets are you going to use in the VPC?
+
 41. In which subnets are you going to locate the ECS cluster and the RDS instances?
+
 42. How would you handle multiple environments (development, staging, production) using Terraform?
+
 43. Can you explain the steps involved in creating a CICD pipeline for deploying a Spring Boot application to ECS?
+
 44. Can you share your experience in handling a large number of servers and your administrative responsibilities?
 ⦁	Follow-up: What kind of administrative tasks and responsibilities have you had in managing a large number of servers?
+
 45. explain kubernetes architecture
+
 46. have you worked on hybrid environment with AKS/EKS
+
 47. how do u implement cost optimization on AKS/EKS
+
 48. Difference between terraform and ansible
+
 49. have u worked on Prometheus
+
 50. have you worked on isolated environment
+
 51. explain ci/cd
+
 52. what is the advantage of using AKS/EKS rather than using kubernetes.
+
 53. How do you monitor applications, services, logs, and key metrics in an organization?
+
 54.  What are the different types of AWS services used for various use cases?
+
 55.  If there are multiple EC2 instances (5-10), and I need to share files across all, which AWS service should I use?
+
 56. If I’m using EFS, but it consumes more than data ex: 10 TB, and making costs high, how can I reduce the cost without impacting the data?
+
 57. What is Auto Scaling Group (ASG) in AWS?
+
 58.  If an ASG scales up to 10 instances and scales down to 5, but I want to keep a critical instance running without termination, how can I configure that?
+
 59. How can I move S3 data older than 30 days to Glacier storage to reduce costs?
+
 60.  What is Route 53, and how does it work?
+
 61.  If my Route 53 DNS receives traffic from multiple countries, can I redirect traffic based on the country?
+
 62. Which text editors are commonly used in Linux for file editing?
+
 63. How do I find and replace all word (e.g.,"abc" with "xyz") inside a file?
+
 64. If a log file contains multiple client IPs and status codes, how can I count the occurrences of different status codes?
+
 65. Write a Linux automation script to extract and count HTTP status codes from a log file every 5 minutes.
+
 66. What is the difference between resource and data in Terraform, and how are they used?
+
 67. What are the most commonly used 10 Terraform commands and their use cases?
+
 68. What are the data types in Terraform?
+
 69. What is a function in Terraform?
+
 70. What are Terraform modules, and how do they function in an environment?
+
 71. What is the Terraform lifecycle, and how does it work?
+
 72. If the Terraform state file is deleted but existing resources need to be managed without recreation, how can we achieve this?
+
 73. If the Terraform state file is deleted, can we recreate or modify existing resources? If so, how?
+
 74. How can multiple EC2 instances be created in Terraform without using the count parameter?
+
 75. What are local and variable definitions in Terraform?
+
 76. If a child module is used for VPC and EC2 instances in Terraform, how can we deploy the EC2 instance in the VPC’s subnet?
+
 77. What is the difference between a resource block and a data block in Terraform?
+
 78. CI/CD (Jenkins, GitHub, Deployment)
+
 79. What is a CI/CD pipeline, and how does it work?
+
 80. How can we define a multibranching strategy in Jenkins?
+
 81. How can we trigger a Jenkins pipeline, and what are the different triggering methods?
+
 82. What best practices should be followed when integrating GitHub with Jenkins?
+
 83. What is a hosted stage in Jenkins?
+
 84. In a Jenkinsfile, if a user wants to change the credentials every time, how can we assign them without hardcoding?
+
 85. If the code passes in a Jenkins pipeline and gets deployed but later encounters issues in production during testing, how can we resolve the issue?
+
 86. What challenges have you faced in DevOps operations, and how did you resolve them?
+
 87. What new frameworks would you suggest to the development team for deployment or code building?
+
 88. How can we check the code health status in GitHub only?
+
 89. EKS/Kubernetes
+
 90. What is a Kubernetes Probe?
+
 91. What is the difference between a Kubernetes Deployment and a DaemonSet?
+
 92. How can deployments be managed in Kubernetes?
+
 93. How do you update the version in EKS, and how will it affect the nodes and pods?
+
 94. If an application is deployed in Kubernetes and needs to connect to an RDS instance, how can it establish a connection from Pods/Nodes?
+
 95. How can AWS Lambda logs be stored in an EKS cluster?
+
 96. How can we upgrade an EKS cluster without affecting application deployments?
+
 97. If a UI-based application is deployed in Kubernetes and accessible via a URL, how can we deploy it in Kubernetes, and how will the backend API respond?
+
 98. AWS Services (EC2, RDS, Lambda, S3, IAM, Networking, Security, Cost Optimization, CloudFormation)
+
 99. EC2 - If an EC2 instance is in a private subnet and needs to send data to an S3 bucket, how can it connect to the S3 bucket?
+
 100. If a resource is in a private subnet and cannot be accessed, how can it be accessed?
+
 101. If a PEM key is lost or deleted, how can we connect to an EC2 instance?
+
 102. RDS & Databases
+
 103. How is authentication provided to database end users, and how do they access it?
+
 104. How can a large number of users in IAM be handled?
+
 105. How can a database server be set up for disaster recovery (DR), and what strategies are commonly used?
+
 106. How do you choose the right database based on requirements?
+
 107. How can database backup data be stored in AWS?
+
 108. How can data transfer costs be reduced if AWS Cost Gateway Hub has led to increased expenses?
+
 109. How can database costs be optimized for unused data that may be needed in the future, and how can the database be resized to save costs?
+
 110. If a database needs to be upgraded to the latest version without data loss, how can this be achieved?
+
 111. How can we optimize and improve the performance of an RDS database?
+
 112. How does DynamoDB work, how is its cost allocated, and how can we reduce DynamoDB costs?
+
 113. If an application is deployed in Kubernetes and needs to connect to an RDS instance, how can it establish a connection from Pods/Nodes?
+
 114. If an RDS database is hosted in a private subnet in AWS and users from an on-premises network need access, how can they connect?
+
 115. Lambda - What is AWS Lambda invocation, and how does it work?
+
 116. When should you use AWS Lambda instead of an EC2 instance, and vice versa?
+
 117. How can a Lambda function be triggered?
+
 118. S3 & CloudFront - What are the best practices for deploying to Amazon S3?
+
 119. In CloudFront, S3 is the endpoint. What other endpoints can be used?
+
 120. IAM & Multi-Account Management
+
 121. A customer requires a Jenkins server deployed in one AWS account, but the same server’s pipelines need to connect to another account in the same region. How can we establish this connection securely?
+
 122. If I have a user who needs to access all accounts, how can they use AWS SSO (Single Sign-On)?
+
 123. I have multiple accounts, and I want to monitor the resources for each user. How can I achieve this?
+
 124. How can I create a cost optimization budget, set up a dashboard, and monitor costs in AWS? Additionally, how do I set up an AWS Organization and manage IAM within the organization?
+
 125. Networking (VPC, Load Balancing, API Exposure)
+
 126. If my web-based application is hosted on a private subnet, how can I access it from outside the subnet?
+
 127. Can VPC peering be done between accounts? In how many ways can we establish a connection between two networks?
+
 128. If an NLB has a static IP address and an ALB has a dynamic IP address, can we assign a static IP address to the ALB?
+
 129. How can an API be exposed to the internet?
+
 130. CloudFormation - If a CloudFormation stack fails and rolls back after one hour, how can we troubleshoot and resolve the issue?
+
 131. Cost Optimization & Monitoring
+
 132. How can data be secured in AWS services?
+
 133. How can I reduce the size of a logical disk on a Linux machine when it is sometimes unused, to save costs?
+
 134. DevOps & Security - How can a 404 error in an application be resolved at the application level?
+
 135. If a UI-based application is deployed in Kubernetes and accessible via a URL, how can we deploy it in Kubernetes, and how will the backend API respond?
+
 136. How can application vulnerabilities be checked in AWS, and which tools can be used for this?
+
 137. If a web application is hosted, how can we secure it, and what security measures can we apply without using third-party tools?
+
 138. Docker - What is a Docker multi-stage build, and how does it work?
+
 139. What is the difference between the ADD and COPY commands in a Dockerfile, and how do the CMD and ENV commands differ?
+
 140. Architecture & Design - How can I design a 3-tier architecture in AWS Cloud? What is the process?
+
 141. How do you design a solution for an AWS microservices application or migrate an application to AWS?
+
 142. Can you provide a brief overview of microservices architecture?
+
 143. What is an AWS Landing Zone, and how is it configured in AWS?
+
 144. What is Databricks, and how does its environment work?
+
 145. What command is used to initialize a Terraform working directory?
+
 146. In Kubernetes, what command is used to check the status of all pods in a specific namespace?
+
 147. Which AWS service is primarily used for object storage?
+
 148. What is the purpose of a Dockerfile?
+
 149. What is the difference between a Deployment and a StatefulSet in Kubernetes?
+
 150. Which tool would you use for infrastructure as code (IaC) when managing AWS resources, and what file format does it use?
+
 151. In Jenkins, which file is commonly used to define CI/CD pipelines as code?
+
 152. What Kubernetes object is used to expose a service externally using a DNS name?
+
 153. Which shell command is used to give execution permission to a shell script?
+
 154. What is the primary purpose of Prometheus in a cloud environment?
+
 156. An Ubuntu server on AWS has run out of disk space, how would you handle this situation?
+
 157. Explain your Roles and Repsonsibilities
+
 158. Explain about the Branching Startegies
+
 159. How do you deploy an app with almost Zero downtime?
+
 160. Challenges faced during moving from on-prem to cloud?
+
 161. What is your team size?
+
 162. How do you keep your pipelines secured?
+
 163. 
- 
 Ans:
 First one , you can follow terraform documentation and get started, use the aws provider, and follow the aws_instance documentation, to get started , you will find a sample example as a reference. 
 
@@ -177,323 +337,833 @@ Sequence of steps would be:
 1. Create a Image using Packer
 2. Use that image with terraform and create the EC2 instance
 3. Install nginx webserver on EC2 instance.
+
 164. What is Docker?
+
 165. How to create a Dockerfile?
+
 166. How to create a Docker container?
+
 167. How to check logs in Docker?
+
 168. What is ulimits in Docker?
+
 169. What is a Parameter Group in a database?
+
 170. Which command to dump and import a database?
+
 171. What is AWS CloudFront?
+
 172. How to map an S3 bucket to a service?
+
 173. How to hide EFS storage?
+
 174. What is an ECS Task Definition?
+
 175. How to deploy an app using AWS ECS?
+
 176. What is the DNS port number?
+
 178. How to copy data from one server to another?
+
 179. Scripted Vs Declarative Pipelines
+
 180. Git Rebase
+
 181. Git Pull vs Git Fetch
+
 182. Docker Layers
+
 183. K8s Ingress Controler
+
 184. How do you do automated testing for your IAC
+
 185. What are best practices for IAC
+
 186. Statefile in Terraform
+
 187. Docker container lifecycle
+
 188. States of Docker container
+
 189. Blocks of Terraform
+
 190. Null resource in terraform
+
 191. Command to Stop and Delete the Docker container
+
 192. what is terraform taint
+
 193. terragrunt terraform
+
 194. Terraform workspace
+
 195. Current Vs Desired state in terraform
+
 196. If someone Deleted the terraform manage resources then how do we recover them?
+
 197. Write a terraform main.tf file to create storage account
+
 198. How do we add self-hosted agent and use it in our pipeline
+
 199. Probes in K8s
+
 200. How do we deploy workloads in master node of K8s
+
 201. What is Helm
+
 202. Create a multi-stages docker files
+
 203. Types of Networks in Docker
+
 204. Why do we get Imagepullbackoff and Crashloopbackoff
+
 205. About Maven release
+
 206. About maven lifecycle
+
 207. About dependency management tag
+
 208. how did u manage Kubernetes pods it is on Linux right?
+
 209. what will happen with maven install
+
 210. what are the types of branching stratergy u r using
+
 211. in which directory or in which place ur pom.xml there
+
 212. What is Ansible and why it’s the most popular tool in DevOps?
+
 213. How Ansible is different from Puppet?
+
 214. Can you list down the pros and cons of Ansible?
+
 215. What is the minimum requirement for Ansible to work?
+
 216. Explain dynamic inventory and its use cases in Ansible.
+
 217. Which protocol does Ansible use to communicate with Linux & Windows?
+
 218. What are Ansible Modules?
+
 219. What are Ansible Tasks?
+
 220. Can you explain what is a playbook in Ansible?
+
 221. How do handlers work in task execution in Ansible?
+
 222. Can you explain what is Ad-Hoc command in Ansible?
+
 223. What is Ansible Vault?
+
 224. Can you explain the concept of Blocks in Ansible?
+
 225. What are Groups of Groups and Group Variables in Ansible?
+
 226. Do you have any idea how to turn off the facts in Ansible?
+
 227. How variables are merged in Ansible?
+
 228. What are Cache Plugins in Ansible? Any idea how they are enabled?
+
 229. What are Registered Variables in Ansible?
+
 230. How Network Module work in Ansible?
+
 231. How Ansible manages multiple communication protocols?
+
 Intermediate Ansible Q&A
+
 232. How to handle different machines needing different user accounts or ports to log in with using Ansible?
+
 233. How to see a list of all of the ansible variables?
+
 234. How to create an AWS EC2 key using Ansible?
+
 235. How to upgrade the Ansible version to the latest version?
+
 236. How to install a WordPress application inside a Docker container using Ansible?
+
 237. How to generate encrypted passwords for the user module in Ansible?
+
 238. How to keep secret data in my playbook in Ansible?
+
 239. What is the minimum requirement for using Docker modules in Ansible?
+
 240. How does the Ansible module connect to Docker API? 
 https://muditmathur121.medium.com/ansible-interview-q-a-34333cee7c42
+
 241. Whats ur organisation current cicd process and tools
+
 242. What do u know about Cyberark and what and how u r consuming that in ur pipeline
+
 243. Which scriting language u r aware? and how much confident on that?
+
 244. What are the services u were used in AWS
+
 245. If U want to design a infra for high scalablity, how did u do that?
+
 246. What are NACLs,SecurityGroups,NAT Gateway
+
 247. About Kubernetes architecture
+
 248. diff b/w Replicaset and Deployment
+
 249. About Ansible,Terraform
+
 250. About ConfigMaps,PV,PVCs
+
 251. write a Deployment file
+
 252. Write a Docker File
+
 253. About multistage Docker file
+
 254. Which type of Jenkins File u r using? Can u pls Write a Jenkins File?
+
 255. What is the toughest situation u r faced while implementing anything and what did u learnt from that?
+
 256. U handled any debug/troubleshoot for kubernetes?
+
 257. About Prometheus/Grafana
+
 258. About Fargate
+
 259. What is lambda functions? did u used any Lambda functions? what did u acheived from that? 
+
 260. What are the differences between service endpoints and private endpoints, and when should each be used?
-    •    How do VPC peering and transit gateway differ, and in what scenarios would you choose one over the other?
-    •    How do you recover a corrupted Terraform state file?
+•    How do VPC peering and transit gateway differ, and in what scenarios would you choose one over the other?
+•    How do you recover a corrupted Terraform state file?
     •    How can you restrict different pods from communicating with each other in Kubernetes?
+
 261. What is the difference between NSG and Firewall.
+
 262. What is the difference between COPY and ADD command in Docker File.
+
 263. What is Taint/Tolerent.
+
 264. What is stateful set.
+
 265. Architecture of Kubernetes.
+
 266. Use case of Node-Port and Cluster IP service Type in Kubernetes.
+
 267. Explain GITHUB Action workflow file.
+
 268. Difference between entry point and CMD in Docker File.
+
 269. Can we connect two different VM that are in a different Vnet.
+
 270. Private Endpoints.
+
 271. Express route in Azure Cloud.
+
 272. What is PDB in Kubernetes.
+
 273. Difference between PV/PVC in Kubernetes.
+
 274. What is state file in Terraform.
+
 275. What is lock file in Terraform.
+
 276. Why Kube-let and Kube-proxy is used for in Kubernetes.
+
 277. How you can build an Image and push it to the ACR.
+
 278. How you can use the existing Image into the YAML file to deploy a POD.
+
 279. What is POD in Kubernetes.
+
 280. Types of Service in Kubernetes.
+
 281. Namespaces in Kubernetes.
+
 282. What happens if your state file is accidentally deleted?
 Answer: Terraform loses track of all managed infrastructure. On next apply, it will attempt to recreate everything from scratch, 
 potentially causing conflicts with existing resources.
+
 283. What happens if multiple team members run terraform apply simultaneously?
 Answer: State file locking fails, risking corrupted state and inconsistent infrastructure. One process succeeds while others error out, 
 potentially leading to drift if not managed properly.
+
 284. What happens if a resource fails halfway through a terraform apply?
 Answer: Terraform leaves successfully created resources running but marks the state as tainted. 
 Subsequent apply operations will attempt to recreate failed resources, but you're left in partial state.
+
 285. What happens when AWS API rate limits are hit during a large terraform apply?
 Answer: Operations fail with throttling errors. Terraform retries a few times then fails the apply. 
 Resources created before the limit was hit remain, creating partial deployments.
+
 286. What happens if terraform plan shows no changes but infrastructure was modified outside Terraform?
 Answer: Terraform won't detect the drift until you run terraform refresh or terraform plan -refresh-only. 
 This can lead to unexpected behavior when making future changes.
+
 287. What happens if you delete a resource definition from your configuration?
 Answer: On next apply, Terraform will destroy that resource in your infrastructure unless you use terraform state rm
 to remove it from state first or use lifecycle { prevent_destroy = true }.
+
 288. What happens if a provider API changes between Terraform versions?
 Answer: You may encounter compatibility issues and failed plans/applies. 
 Resources might need to be rebuilt or configurations updated to match new API requirements.
+
 289.  What happens if you have circular dependencies in your Terraform modules?
 Answer: Terraform will fail to initialize or plan with dependency cycle errors. 
 You'll need to refactor your module structure to break the circular references.
+
 290. What happens if you exceed AWS service quotas during deployment?
 Answer: Resources will fail to create with quota exceeded errors. 
 Terraform marks them as failed, and you'll need to request quota increases before retrying the apply.
+
 291. What happens if you lose access to the remote backend storing your state?
 Answer: All Terraform operations fail until access is restored. 
 Teams can't collaborate, and changes can't be applied safely. This effectively blocks all infrastructure changes.
+
 292. What will happen if the k8 master node and worker node firewall gets broken? Will the existing deployments work or impact on any new deployments
 How will you communicate to people
+
 293. How to use the secrets in kubernetes? What encryption methods do you use?
+
 294. How does the GSLB load balancer work?
+
 295. What is SLI, SLO, SLA
+
 296. How can you create the extensions in Grafana
+
 297. How does the ELK setup has been done and what type of agents have you collected
+
 298. Can you tell one scenario where you have done the RCA wrt linux
+
 299. You have the JSON data could you please let me know how would you ingest and collect the data in the keys format.
+
 300. Can you design the Istio Setup for your k8 cluster?
+
 301. AWS event bridge creation and setup via terraform
+
 302. What will be the command to add the annotation and the labels for the existing pod?
+
 303. Design the kubernetes cluster with Ingress.
+
 304. A sudden surge in traffic causes a web application to become unresponsive what will be the steps you will take to mitigate
+
 305. Design the deployment of the pod with replica set set as 3 and having apache httpd image running as a container.
+
 306. How do you reduce the size of Dockerfile
+
 307. Write a shell script to find and delete all files in a directory that are older than 30 days.
+
 308. Create a script to monitor the disk usage of a server. If usage exceeds 80%, log the details to a file and send an alert email.
+
 309. Write a script that renames all .txt files in a directory by appending the current date to the filename.
+
 310.What are the security parameters we must consider while we are creating an EC2 instance for production?
+
 311. How can you protect the data in an AWS instance?
+
 312. How can you connect from AWS to on-prem servers?
+
 313. Explain about the transit gateway and why do we use this?
+
 314. What are the provisioners available in Terraform and can you explain the use cases?
+
 315. I have created an EC2 instance named A, and I want to create another instance B. It should create an instance without deleting instance A. 
 What can I do during this?
-316. I have created an EC2 instance through Terraform. I don't have a backup of the Terraform state file, it is not in the remote state and locally not available. Now when I do apply, what can I do?
-317. Suppose I have given one command in null resource, it should run every time. What is the behavior?
-318. What is the difference between a map of objects in Terraform and how can you write an example?
-319. Suppose in your DevOps team, new team members are added to your team. How can you provide AWS access to your new users, what is the behavior of login to the console?
-320. What is the difference between an EBS-backed instance and a non-EBS-backed instance?
-321. When I deploy the pods, it should be deployed on large and medium. Nodes, except small. How can I configure that?
-322. I am getting the following error, how can I debug that and what does the error mean?
 
+316. I have created an EC2 instance through Terraform. I don't have a backup of the Terraform state file, it is not in the remote state and locally not available. Now when I do apply, what can I do?
+
+317. Suppose I have given one command in null resource, it should run every time. What is the behavior?
+
+318. What is the difference between a map of objects in Terraform and how can you write an example?
+
+319. Suppose in your DevOps team, new team members are added to your team. How can you provide AWS access to your new users, what is the behavior of login to the console?
+
+320. What is the difference between an EBS-backed instance and a non-EBS-backed instance?
+
+321. When I deploy the pods, it should be deployed on large and medium. Nodes, except small. How can I configure that?
+
+322. I am getting the following error, how can I debug that and what does the error mean?
     Pods fail to schedule
     0/5 nodes are available: insufficient memory.
 
 323. What is the difference between scaling and autoscaling in Kubernetes?
+
 324. If I don't specify TargetPort in the service object, what is it going to do?
+
 325. What are the different types of secrets in Kubernetes?
+
 326. I have an Ingress object that is not routing the traffic to the Kubernetes cluster. What are the reasons and how do you troubleshoot that?
+
 327. I have created a service object that is not mapped to a deployment. What could be the reason and how do you debug it?
+
 328. What are the different ways to specify the probes in Kubernetes?
+
 329. What is the difference between git push --force-with-lease vs --force?
+
 330. If I select the restart policy as Never, what is it going to do?
+
 331. What is an init container and why do we need to use it?
+
 332. What is the difference between EKS vs ECS vs Fargate?
+
 333. How can you delete the last 2 git commits?
+
 334. I have 3 nodes (small, medium, and large), and I want only data load to go to the large node. How can I do that?
+
 335. ow you ensure the best possible security for high availability architectures for 3 tier applications.
+
 336. Diff b/w SGs and NACLs.
+
 337. what is VPC peering.
+
 338. How do you scan the vulnerabilities specially for AWS instances.
+
 339. diff between IAM Users and Roles
+
 340. Can you avoid the specific port traffic using SGs?
+
 341. How you connect to private instances when the SSH connection is not working?
+
 342. where do you use firewalls, SGs and NACLs
+
 343. What are the best password security practices used by your organisation?
+
 344. How many NAT Gateways are needed for two public & two private subnets n a single VPC? Min & max?
+
 345. Explain TTL in DNS- how does it work, and when do we use it? Explain the Flow.
+
 346. How does weighted routing work in LB?
+
 347. How Docker is operable on a Linux machine? Explain the docker architecture components
+
 348. There are 1 Master & 3 Worker nodes- if the master fails, what happens? Will pods keep running or they will crash?
+
 349. In K8s, as etcd is a key-value store db, can write something manually on it?
+
 350. How to roll back a failed deployment in Docker & K8s?
+
 351.  How does SSL work (Certbot, Let's Encrypt, AWS)? Explain the Flow.
+
 352. What are the top 5 infra attacks, and how do you mitigate them?
+
 353. If the tfstate file is lost, what do you do? With & without backup?
+
 354. In Linux systems there is the term Load Average? what does that mean? how it is being calculated? and in what format the load average output is?
+
 355. One of your worker nodes is not joining the cluster. How would you debug the issue?
+
 356. what is diff between pv and pvc
+
 357. Expalin kuberenets arthciecture 
+
 358. what is diff between deployment and statefullset 
+
 359. what is calico 
+
 360. what is etcd
+
 361. how to take bakcup of kubenretes cluster 
+
 362. how to upgrade eks clusetr
+
 363. what is rolling update 
+
 364. what is deployment statgergy you are using 
+
 365. can we run 1 conatiner with 2 pods what is statefullset 
+
 366. terraform have you build the vm 
+
 367. what is ingress controller 
+
 368. Supoose you have taked etcd backup and old vm corrupted ,can we create new vm with backup etcd ?
+
 369. what are steps to upgrade eks cluster 
-370. Suppose you have  in satetfull 3 pods which having name mongo-0 , mongo-1, mongo-2 what happen if mongo-0 dies when new pod will create 
+
+370. Suppose you have  in statetful 3 pods which having name mongo-0 , mongo-1, mongo-2 what happen if mongo-0 dies when new pod will create 
 what will be pod new name ?
+
 371. have you worked on argo cd , helm 
+
 372. suppose we have pods 2 running in rolling updates some are in deployments set and some pods are in statefull set , 
 how rolling updates strategy will work here  ? 
+
 373. what is docker multisatge , why it is used and all grafana have you worked?
+
 374. What is connection drain
+
 375. Backend.tf file is showing in repo but it is not showing in storage account, what may be the issue
+
 376. How to login VM if VM has private IP
+
 377. You have deployed a web app and it was working fine but application went down, and all networking are fine and related ports are open,
 how to troubleshoot
+
 378. Types of load balancers
+
 379. What is Az App Gateway and how it encrypt http/https traffic
+
 380. App is down and throwing 503 err code, what steps should be taken
+
 381. Suppose if you have taken backup of etcd for some how master node got some issue  not getting up  and we have another empty vm 
+
 382. can we migrate this etcd or not?will all resource will be available or not
+
 383. What is connection drain
+
 384. Backend.tf file is showing in repo but it is not showing in storage account, what may be the issue
+
 385. How to login VM if VM has private IP
+
 386. You have deployed a web app and it was working fine but application went down, and
 all networking are fine and related ports are open,how to troubleshoot
+
 387. Types of load balancers
+
 388. What is Az App Gateway and how it encrypt http/https traffic
+
 389. App is down and throwing 503 err code, what steps should be taken
+
 390. Introduce yourself 
+
 391. git commands used in day to day activities
+
 392. write sample docker file
+
 393. write sample terraform resource file
+
 394. Difference between git rebase and git merge
+
 395. difference between cmd and entry point 
+
 396. explain about Prometheus and grafana
+
 397. what will be your approach if pod.yaml failed
+
 398. explain about blue green deployment strategy 
+
 399. explain kubernets architecture 
+
 400. commands used in kubernets 
+
 401. if application which you are trying to deploy with kubernets got crashed and you are not able to enter into pod what will be your approach 
+
 402. explain about your project pipeline
+
 403. have you worked on production deployment activity ?
+
 404. how frequently do we deploy to production in your current project
+
 405. Current Company project related questions
+
 406. What task and activities do you do on daily basis
+
 407. What is Prometheus, Grafana, Loki
+
 408. What is Kibana 
+
 409. How does Prometheus collect metrics
+
 410. How is Prometheus setup
+
 411. How is Kibana set up
+
 412. What is log rotate job and how does it work
+
 413. What is Jenkins, Ansible 
+
 414. What is Terraform and how do you use terraform in your project and what all resources have you provisioned 
+
 415. What are deployments, daemonset, statefulsets
+
 416. Basic Kuberntes commands
+
 417. What is Docker and how do you use in your project, Any docker file you have written
+
 418. What are data sources for Grafana, Kibana
+
 419. How is traffic routed inside kuberntes clusters
+
 420. ELB, Ingress questions 
+
 421. How do you receive alerts in your project and how is it setup
+
 422. What is pod
+
 423. What are indices, index in Kibana
+
 424. Cronjobs
+
 425. Paas Questions 
+
 426. How do you handle disk, CPU alerts 
+
 427. What all Kuberntes issues you have worked on
+
 428. If any pod/node goes down how do you troubleshoot/monitor that( via cluster and other monitoring tools)
+
 429. Whats ur organisation current cicd process and tools
+
 430. How comfortable with AWS and how much rate urself out of 5?
+
 431. about IAM/Fargate/EC2/Lambda?
+
 432. Can u pls write a lambda file?
+
 433. About K8's Architecture and tell me the workflow?
+
 434. Can u pls write terraform file to provision the Ec2 instance in a public subnet in a VPC?
+
 435. R u using Dockerfile? u r build the dockerfile by codebuild?
+
 436. How many containers can run in a pod?
 in ur projects how many containers u ran? can u give me the use case where can run 4-5 containers in a pod?
+
 437. did u configure Prometheus and Grafana?
+
 438. What securities measures/tools u were taken in ur cicd pipeline?
+
 439. about RBAC
+
 440. Explain current project 
+
 441. Asked about k8s ( deployment, services, and configs) 
+
 442. How to integrate grafana with prometheus
+
 443. Terraform lifecycle
+
 444. Service mesh
+
 445. Pod disruption budget
+
 446. Git sqash
+
 447. Git rebase
+
 448. Purpose of Docker
+
+449. In Git, explain the push and pull commands.
+    •    git push uploads local repository content to a remote repository.
+    •    git pull fetches changes from a remote repository and merges them into the local branch.
+
+450. What is the use of Git tags?
+    •    Git tags mark specific points in the repository’s history, often used for version releases (e.g., v1.0).
+
+451. What are the different types of branches in Git?
+    •    Main/Master Branch: The production-ready branch.
+    •    Feature Branch: For developing new features.
+    •    Develop Branch: Integration branch for new features before merging into the main branch.
+    •    Release Branch: Prepares stable code for release.
+    •    Hotfix Branch: For urgent fixes in production.
+
+452. How do you write an Ansible playbook, and what client requirements do you consider?
+    •    A playbook is a YAML file defining tasks to be executed on remote servers.
+    •    Considerations: OS compatibility, dependencies, idempotency, user permissions, and rollback strategies.
+name: Install Nginx
+hosts: webservers
+become: yes
+tasks:
+name: Install Nginx
+  apt: 
+    name: nginx
+    state: present
+
+453.  In Python, what are lists and tuples, and how do they differ?
+    •    Lists: Mutable, dynamic, and defined using [].
+    •    Tuples: Immutable, faster, and defined using ().
+
+454. In CloudWatch, what is the use of log groups and log trails?
+    •    Log Groups: Logical containers for log streams from different services.
+    •    Log Trails: Capture and store API activity for auditing (linked with CloudTrail).
+
+455. In Terraform, what is the purpose of init, plan, and apply commands?
+    •    terraform init → Initializes the working directory.
+    •    terraform plan → Shows what changes will be made.
+    •    terraform apply → Applies the changes to the infrastructure.
+
+456. What are Network ACLs and Security Groups, and how do they differ?
+    •    Network ACLs: Stateless, applied at the subnet level, allow/deny specific traffic.
+    •    Security Groups: Stateful, applied at the instance level, allow only permitted traffic.
+
+457. Explain EC2 instances and handling multiple VPCs.
+    •    EC2 instances are virtual servers in AWS. Multiple VPCs can be connected using VPC peering or Transit Gateway.
+
+458. How do you configure AWS RDS, and what factors do you consider?
+    •    Factors: Instance size, storage type (GP2/IO1), backup retention, multi-AZ, read replicas, and security settings.
+
+459. How much data is stored in your RDS MySQL?
+    •    Use SELECT table_schema AS DB, SUM(data_length + index_length) / 1024 / 1024 AS SIZE_MB FROM information_schema.tables GROUP BY table_schema;
+
+460. How many masters and slaves are in RDS?
+    •    RDS uses one primary instance (master) and multiple replicas (read replicas for read scalability).
+
+461. How do you configure a Grafana dashboard?
+    •    Add a data source (e.g., Prometheus, CloudWatch), create a panel, define metrics, and set visualization options.
+
+462. What kind of CI/CD pipelines are you familiar with?
+    •    Jenkins, GitHub Actions, GitLab CI/CD, AWS CodePipeline, ArgoCD.
+
+463. Explain Declarative vs. Scripting pipelines.
+    •    Declarative Pipelines: Define the pipeline as code using YAML or JSON (e.g., Jenkinsfile).
+    •    Scripting Pipelines: Use scripting (e.g., Bash, Python) to define steps dynamically.
+
+464. In Kubernetes, if a pod is in a pending state, how do you troubleshoot?
+    •    Check pod status (kubectl get pods), describe pod (kubectl describe pod <pod-name>), check events (kubectl get events).
+
+465. If Docker containers are consuming too much disk space, how do you fix it?
+    •    Run docker system prune to clean unused containers, images, and volumes.
+
+466. In Linux, how do you attach and detach a filesystem?
+    •    Attach: mount /dev/sdX /mnt
+    •    Detach: umount /mnt
+
+467. How do you print the last 15 lines of a file in Linux?
+    •    tail -n 15 filename.txt
+
+468. What is your day to day activity
+
+469. If there is file which is being used by 2 customers, and need to deploy that file in k8s cluster and on prem as well, how to do that?
+
+470. What is the issue with using large file image in dockerfile
+
+471. How to deploy an app to k8s cluster in terms of app deploy only ( basically explain CD part)
+
+472. If secret is stored in vault inside a pod and that pod is down then how to tsg
+
+473. How azure key vault is integrated in cicd
+
+474. What to do if an application is down
+
+475. Scenario based includes 3 sub-questions 
+a) If any service is down for more than 2 weeks and customer is asking for update, what will you tell to customer?
+b) How to troubleshoot the issue and what will be checked during the process
+c) what steps to take so that the issue will not happen in future 
+
+476. Contents written inside docker file
+
+477. Contents written inside deployment.yaml or heml chart
+
+478. How do you use Azure Key Vault's secrets in AKS? 
+Azure Key Vault secrets can be used in AKS using: 
+    •    Azure Key Vault Provider for Secrets Store CSI Driver 
+         Deploy the Secrets Store CSI Driver in AKS. 
+         Create a SecretProviderClass referencing the Key Vault secrets. 
+         Mount the secrets as volumes inside pods. 
+    •    AAD Pod Identity (Deprecated, replaced by Workload Identity) 
+         Assign a Managed Identity to AKS. 
+         Grant it access to Key Vault.
+         Use SDKs or environment variables to fetch secrets.
+
+479. How will the application (container/pod) fetch the latest (rotated) secrets from Azure Vault?
+    •    Secrets Store CSI Driver allows automatic refresh if syncSecret: true is set. 
+         Applications need to restart or re-read secrets dynamically if mounted as files. 
+         For direct API access, the pod must periodically fetch the latest secret using the Azure SDK.
+
+480. How do you integrate SonarQube & Snyk in Azure Pipeline? 
+    •    SonarQube Integration: 
+         Install SonarQube extension in Azure DevOps. 
+         Configure a SonarQube Service Connection. 
+         Add a task in azure-pipelines.yml: - task: SonarQubePrepare@4 
+inputs: 
+SonarQube: 'SonarQube-Service' 
+scannerMode: 'CLI' 
+    configMode: 'manual' 
+    extraProperties: | 
+      sonar.projectKey=my-project - task: SonarQubeAnalyze@4 - task: SonarQubePublish@4 
+  inputs: 
+    pollingTimeoutSec: '300' 
+ 
+Snyk Integration: 
+ 
+Install Snyk extension in Azure DevOps. 
+ 
+Add a task in azure-pipelines.yml: 
+ - task: SnykSecurityScan@1 
+  inputs: 
+    serviceConnectionEndpoint: 'Snyk-Service' 
+    testType: 'app' # Code scan 
+    monitorOnBuild: true 
+
+481.  How do you secure your AKS cluster? 
+    •    Networking: 
+ Use Private AKS cluster to restrict public access. 
+ Use Azure Firewall & NSGs to restrict traffic. 
+    •    Authentication & Authorization: 
+ Integrate with Microsoft Entra ID (AAD) for RBAC. 
+ Use Managed Identities instead of secrets. 
+    •    Pod Security: 
+Implement Pod Security Standards (PSPs) or Azure Policy for AKS. 
+Enforce network policies to restrict pod communication. 
+    •    Data Protection: 
+Use Azure Key Vault for secrets management. 
+Encrypt storage with Customer Managed Keys (CMK). 
+    •    Monitoring & Compliance: 
+Enable Microsoft Defender for Kubernetes. 
+Use Azure Policy & Audit Logs for compliance.
+
+482.  How do you make your AKS cluster highly available? 
+Deploy AKS in multiple Availability Zones. 
+Use Multiple Node Pools to distribute workloads. 
+Configure Pod Disruption Budgets (PDBs) to prevent pod failures. 
+Enable Cluster Autoscaler to handle load changes dynamically. 
+Use Application Gateway Ingress Controller (AGIC) for load balancing.
+
+483. How do you perform cost optimization in AKS? 
+Use Cluster Autoscaler to adjust nodes based on demand. 
+Implement Horizontal Pod Autoscaler (HPA) to scale pods dynamically. 
+Use Spot VMs for non-critical workloads. 
+Optimize container images to reduce resource consumption. 
+Monitor costs using Azure Cost Management.
+
+484. HPA triggers (what types have you used in HPA so far)? 
+HPA scales pods based on: 
+CPU Utilization (targetCPUUtilizationPercentage). 
+Memory Utilization (resource.memory). 
+Custom Metrics (e.g., HTTP requests per second). 
+External Metrics (e.g., messages in an Azure Service Bus queue). 
+ 
+Example HPA YAML: 
+ 
+apiVersion: autoscaling/v2 
+kind: HorizontalPodAutoscaler 
+metadata: 
+  name: my-app-hpa 
+spec: 
+  scaleTargetRef: 
+    apiVersion: apps/v1 
+    kind: Deployment 
+    name: my-app 
+  minReplicas: 2 
+  maxReplicas: 10 
+  metrics: 
+  - type: Resource 
+    resource: 
+      name: cpu 
+      target: 
+        type: Utilization 
+        averageUtilization: 70 
+
+485. Stateful Vs Stateless Applications 
+
+486. How do you manage data of stateless applications? 
+Store data in external databases (Azure SQL, Cosmos DB). 
+Use Persistent Volumes (Azure Files, Azure Disk) if temporary storage is needed. 
+Utilize Redis Cache for session storage. 
+
+487. How do you integrate EntraID (AAD) with AKS for authentication? 
+1. Enable AAD integration in AKS: 
+az aks update --resource-group my-rg --name my-aks --enable-aad 
+2. Create an Azure AD Group and Assign RBAC: 
+apiVersion: rbac.authorization.k8s.io/v1 
+kind: RoleBinding 
+metadata: 
+name: aad-cluster-admin 
+subjects: - kind: Group 
+name: <AAD-GROUP-ID> 
+apiGroup: rbac.authorization.k8s.io 
+roleRef: 
+kind: ClusterRole 
+name: cluster-admin 
+apiGroup: rbac.authorization.k8s.io 
+Users must log in using: 
+az aks get-credentials --resource-group my-rg --name my-aks --admin 
+kubectl auth can-i get pods --namespace default 
