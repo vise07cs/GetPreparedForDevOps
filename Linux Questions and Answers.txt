@@ -1,0 +1,600 @@
+1. How do I find and replace all word (e.g.,"abc" with "xyz") inside a file in Linux?
+
+	Solutions:
+	
+		- sed -i 's/abc/xyz/g' filename
+			§ sed: The stream editor command.
+			§ -i: Edit the file in place (i.e., modify the original file directly).
+			§ s: The substitute command.
+			§ abc: The word to find.
+			§ xyz: The replacement word.
+			§ g: Global flag → replaces all occurrences in each line.
+			§ filename: The name of the file you want to modify.
+	
+
+2. How to find and replace a word in VIM editor?
+	
+		- :%s/oldword/newword/g
+			§ : → Enters command mode in Vim.
+			§ % → Applies the command to the entire file.
+			§ s → Substitute command.
+			§ /oldword/ → The word to find.
+			§ /newword/ → The replacement word.
+			§ g → Global flag → replaces all occurrences in each line.
+			- 
+		- :%s/oldword/newword/                                                   --> replace the word in first line only
+		
+	    -  :%s/oldword/newword/gc                                                    --> Replace with Confirmation 
+	
+	
+
+3.  How to find and replace a word in Nano editor?
+	
+		- Ctrl + \                                --> Nano asks which word need to select, type the word and press enter, again ask which word need to replace. Type and enter.
+
+
+
+4. If a log file contains multiple client IPs and status codes, how can I count the occurrences of different status codes? - Linux
+	
+		- awk '{print $NF}' logfile | sort | uniq -c | sort -nr
+			
+			§ awk '{print $NF}' → Extracts the last field (typically the status code in log files).
+			§ sort → Sorts the status codes
+			§ uniq -c → Counts the occurrences of each status code.
+			§ sort -nr → Sorts the results in descending order by count.
+		- The command {print $NF} is commonly used in awk, a text-processing tool in Linux. It prints the last field of each line in a given input.
+		- Example: awk '{print $NF}' file.txt  --> This extracts and prints the last word/field from each line in file.txt.
+	
+
+5. 'awk' command function:
+	     - awk is suitable for pattern search and processing. The script runs to search one or more files to identify matching patterns and if the said patterns perform specific tasks. 
+			§ Scanning files line by line
+			§ Splitting each input line into fields
+			§ Comparing input lines and fields to patterns
+			§ Performing specified actions on matching lines
+		
+		Example:
+			§ awk '{print $1, $3}' file.txt          --> Prints the 1st and 3rd columns from file.txt (columns are space/tab-separated).
+			§ awk '/error/ {print}' logfile.txt   --> Prints lines containing "error" in logfile.txt.
+			§ awk '$3 > 50 {print $1, $3}' data.txt   --> Prints the 1st and 3rd columns where the 3rd column is greater than 50.
+			§ awk 'END {print NR}' file.txt          --> Count the Number of Lines in a File
+			§ awk '{sum += $2} END {print sum}' numbers.txt  --> Adds up all values in column 2 and prints the total.
+			§ awk '{gsub("oldword", "newword"); print}' file.txt  --> Replaces "oldword" with "newword" in file.txt.
+			§ awk '{print NR, $0}' file.txt          ---> Adds line numbers before each line.
+			
+		
+		
+6. Which shell command is used to give execution permission to a shell script?
+	
+		- Chmod 755 script-name.sh
+	
+	
+7. Why Linux? Advantages over other OS!
+	
+	• Key Advantages of Linux Over Other OS.
+		- Linux is open source, meaning its source code is freely available for anyone to view, modify, and distribute.
+		- Cost-effective: Unlike Windows or macOS, most Linux distributions are free to download and use.
+		- No need for expensive licenses or subscriptions.
+		- Linux is known for its stability and reliability, making it a popular choice for servers and critical systems
+		- Can run for years without rebooting, unlike Windows, which often requires regular reboots.
+		- Low system crashes compared to other OS.
+		- More secure by design → Linux has strict user permissions and requires root privileges to modify core files.
+		- Frequent patches and updates → Linux distros have a large community that quickly identifies and fixes vulnerabilities.
+		- Less prone to viruses compared to Windows.
+		- Linux package managers (e.g., apt, yum, dnf, zypper) make installing and updating software easy and consistent.
+		- No need to download and run installers like in Windows. Centralized repositories provide verified and trusted software.
+	
+	
+8. Types of Conditions available in Shell Script:
+	
+		- File Conditions
+		- String Conditions
+		- Integer Conditions
+		- Compound Conditions
+
+9. In which directory or in which place your pom.xml there
+	
+		- find /path/to/your/project -name "pom.xml"
+		
+	
+10. What is sticky bit in Linux?
+	
+	  - The Sticky Bit is a special permission in Linux used to protect files from being deleted by unauthorized users in a shared directory.
+		When the sticky bit is set on a directory:
+			• Only the owner of the file or the root user can delete or rename the file.
+			• Other users, even if they have write access to the directory, cannot delete or modify the file.
+		- It is commonly used in shared directories like /tmp to prevent users from accidentally or maliciously deleting each other’s files.
+		- Without the sticky bit: Any user with write access to the directory can delete any file.
+		
+		- chmod +t <directory_name>                --> syntax to set a sticky bit for a directory
+		- ls -ltr         -->       drwxrwxrwt                --> the sticky bit is represented by the letter t at the end of the permissions.
+		- chmod +t <file-name>                           --> apply a sticky bit to a particular file.
+	
+	
+11. How do we verify if our shell script is executed successfully?
+	
+	- 1️⃣ Exit Status Code.  In Linux, every command and script returns an exit status code.
+		- 0 → The script executed successfully.
+		- Non-zero → The script failed with an error.
+		- 1-255 → Various error codes indicating different types of failures.
+
+		Exit Code	Status	Meaning
+		0	Success	The command/script executed without errors.
+		1	General Error	A generic error occurred (catch-all for unknown errors).
+		2	Misuse of Shell Builtins	Incorrect usage of shell commands (e.g., missing arguments).
+		126	Permission Denied	Command found but cannot execute (e.g., no execute permissions).
+		127	Command Not Found	The command does not exist or is not in PATH.
+		128	Invalid Exit Argument	Exit status out of range (valid: 0-255).
+		130	Script Terminated (Ctrl+C)	Process was interrupted with Ctrl+C (SIGINT).
+		137	Killed (Out of Memory or SIGKILL)	Process was forcefully killed (e.g., kill -9).
+		139	Segmentation Fault (SIGSEGV)	A program accessed an invalid memory address.
+		143	Terminated (SIGTERM)	Process was stopped using kill or systemctl stop.
+		255	Out of Range Exit Code	Custom exit code above 255 wraps around (e.g., exit 300 becomes exit 44).
+		
+		
+
+12. What is the flag to check file is empty or not?            
+	
+		- '-s' flag  --> The -s flag is used to check if a file is NOT empty.
+		- -s  → Returns true if the file has content.
+	
+	Example:
+		a) Using -s (Checks if File is NOT Empty)
+	__________________________________________
+	if [ -s filename ]; then
+	    echo "File is NOT empty"
+	else
+	    echo "File is empty"
+	fi
+	##########################################
+	
+		b) Using -z (Checks if File is Empty)
+	__________________________________________
+		if [ -z "$(cat filename)" ]; then
+		    echo "File is empty"
+		else
+		    echo "File is NOT empty"
+		fi
+	####################################################
+		
+
+13. What are positional parameters ?
+		
+		- Positional parameters are special variables that hold the arguments passed to a shell script or function.
+		- When you execute a script and pass arguments, they are automatically assigned to positional parameters.
+		- ./script.sh arg1 arg2 arg3
+		
+		$0 → The name of the script (`script.sh`)
+		$1 → First argument (`arg1`)
+		$2 → Second argument (`arg2`)
+		$3 → Third argument (`arg3`)
+		
+		
+	Special Positional Parameters:
+	Parameter	Description
+	$0	Name of the script
+	$#	Number of arguments passed
+	$*	All arguments as a single string
+	$@	All arguments as separate strings
+	$$	Process ID (PID) of the current shell
+	$?	Exit status of the last command
+		
+		
+
+14. What is command substitution?
+	
+	- Command substitution allows you to store the output of a command into a variable or use it as part of another command. 
+	- It replaces the command with its output.
+	- 1. Using backticks ` ` (older style)         --> output=`date`	
+	- 2. Using $(...) (modern style)                --> output=$(date)
+	
+	Example:
+	
+	#!/bin/bash
+	
+	# Using backticks
+	current_date=`date`
+	
+	# Using $()
+	current_time=$(date +%T)
+	
+	echo "Today's date: $current_date"
+	echo "Current time: $current_time"
+	
+	
+
+15. What is Crontab? How do you set crontab in Linux?
+
+	- crontab (cron table) is a job scheduler in Linux used to:
+		- Automatically run commands or scripts at specified times or intervals.
+		- Schedule recurring tasks like backups, log rotations, or monitoring jobs.
+	- crontab -e                       --> to edit the crontab
+
+	      
+	# ┌──────────── minute (0 - 59)
+	# │ ┌────────── hour (0 - 23)
+	# │ │ ┌──────── day of the month (1 - 31)
+	# │ │ │ ┌────── month (1 - 12)
+	# │ │ │ │ ┌──── day of the week (0 - 6) [0 → Sunday]
+	# │ │ │ │ │
+	# * * * * * <command or script>
+	
+	
+
+16.  How to Ensure Your .sh Script Runs After System Restart Using crontab!
+	
+	1️⃣ The Issue
+	By default, crontab only runs the jobs at specific time intervals (e.g., every 5 minutes, every hour, daily, etc.).
+		• If your system restarts, any missed cron jobs during the downtime are not executed.
+		• To automatically run your script after every reboot, you need to use the @reboot keyword.
+	
+		• @reboot /path/to/your_script.sh                        
+		• You can add this line in the cron configuration by running:
+				□ crontab -e
+				□ @reboot /path/to/your_script.sh
+				□ Eg: @reboot /home/user/backup.sh              --> This will execute the backup.sh script once on every system reboot.
+				□ For the cron job to work properly, your script needs execute permissions. Make sure of it.
+				□ chmod +x /path/to/your_script.sh
+			
+			
+			
+17. How will you debug the Shell Script?
+
+	- Set -x
+
+	set -x → Enable Debug Mode
+		• Displays each command before executing it, along with its expanded arguments.
+		• Helps in troubleshooting and debugging scripts by showing the execution flow.
+	set +x → Disable Debug Mode
+		• Turns off the command execution trace.
+		• Hides the commands from being displayed.
+	
+	
+
+18.  How to open a read only file?           
+	 -  vi -r <filename>
+	
+	
+	
+19.  What is the difference between soft link and hard link?
+
+	 Link --> links are essentially pointers to files.
+	
+	• Soft Link (Symbolic Link) → Acts like a shortcut or reference to another file.
+	• Hard Link → Acts like a clone of the original file, sharing the same inode.
+
+	   Feature	Soft Link (Symbolic Link)	Hard Link
+	Nature	Shortcut/reference to the original file	Duplicate entry that points to the same inode
+	Command	ln -s target link_name	ln target link_name
+	Inode	Has a different inode than the original file	Shares the same inode as the original file
+	File Deletion	Deleting the original file makes the link broken	Deleting the original file doesn’t affect the link
+	Size	Stores only the path to the original file (small size)	Same size as the original file
+	Across Filesystems	Can link across different filesystems	Cannot link across filesystems
+	Directories	Can link to directories	Cannot create a hard link to directories
+	Permissions	Has its own permissions	Same permissions as the original file
+			
+			
+		
+20. What is the difference between break and continue statements?
+
+	- Break means will breaking the execution of script, The break statement terminates the loop entirely and exits the loop, no matter how many iterations are left.
+	break   # Exits the current loop immediately
+	
+	- Continue means (skip) and continue the execution of script. The continue statement skips the current iteration and moves to the next iteration of the loop.
+	continue   # Skips the current iteration and continues the loop
+	
+	Example: 
+	
+	#!/bin/bash
+	
+	# Loop from 1 to 5
+	for i in {1..5}; do
+	    echo "Iteration: $i"
+	    
+	    # Exit the loop when i equals 3
+	    if [ "$i" -eq 3 ]; then
+	        echo "Breaking out of the loop!"
+	        break
+	    fi
+	done
+	
+	echo "Loop terminated."
+	
+	
+21. What are some disadvantages of Shell Scripting!
+	
+		- Errors are frequent, single error can alter the command
+		- the  execution speed is slow comparing to other
+		- Not suitable for large and complex tasks
+		- It provides the minimal data structure which is contrary to other scripting languages
+		- Every time a shell command is executed a new process is launched
+		
+		
+22. What are different types of loops and when to use?
+	
+		- For Loop
+		- while Loop
+		- Until Loop
+		
+	Loop Type	Description	When to Use
+	for	Iterates over a list or range of numbers	When you know the iteration count
+	while	Executes as long as the condition is true	When the condition is dynamic
+	until	Executes until the condition becomes true	Opposite of while
+	select	Creates a menu for selection	For interactive menus
+	break	Exits the loop immediately	When you need to stop the loop
+	continue	Skips the current iteration and moves to the next	To skip specific conditions
+	
+	
+23. Is bash dynamically or statistically typed and why?
+	
+		- Its a dynamically type. 
+		- Statically typed (Type checking happens at compile time)  
+		- Dynamically typed (when type checking happens at run time)
+		
+
+24. How will you manage logs of a system that generate huge log files every day!
+
+	Log Rotation
+	Log rotation is the most common and efficient way to manage huge log files. It splits large logs into smaller, manageable chunks and archives or deletes old logs periodically.
+	📌 Tool: logrotate
+	Logrotate Configuration
+	You can use the logrotate utility to:
+		• Rotate logs daily, weekly, or based on size.
+		• Compress old logs to save disk space.
+		• Remove logs older than a specified period.
+		• Limit log file size.
+				□ logrotate /etc/logrotate.conf                  --> To run logrotate manually:
+				□ logrotate -d /etc/logrotate.conf              --> For debugging (without making changes):
+				□ logrotate -f /etc/logrotate.conf              --> Force immediate rotation:
+			
+			
+		• Basic logrotate Syntax:
+		
+			/path/to/logfile {
+			    option1 value1
+			    option2 value2
+			    ...
+			}
+			• 
+	
+25. Difference between stdin, stdout, stderror
+	
+	1️⃣ stdin → Standard Input
+		• stdin (Standard Input) is the data stream from which a program reads input.
+		• By default, it takes input from the keyboard.
+		• File descriptor → 0.
+		• It is used to feed data into a program
+	
+		Example:
+		
+		read name  # 'name' receives the input from stdin
+		echo "Hello, $name"
+		
+	
+	
+	2️⃣ stdout → Standard Output
+		• stdout (Standard Output) is the default data stream where a program writes its output.
+		• By default, it displays output on the terminal (screen).
+		• File descriptor → 1.
+		• You can redirect stdout to a file or another program.
+	
+		echo "Hello, World!"            -->   # Print output to stdout (screen)
+		echo "Logging output" > output.log
+		
+	
+	3️⃣ stderr → Standard Error
+		• stderr (Standard Error) is the data stream for error messages.
+		• It displays error messages separately from regular output.
+		• File descriptor → 2.
+		• You can redirect stderr to a file or another stream.
+	
+	
+		cat non_existing_file.txt -->                   # Try to read a non-existent file
+		
+		cat non_existing_file.txt 2> error.log                      # # Redirect stderr to a file
+		
+		
+26. Can you name some standard directories in a Linux system?
+
+	Directory	Purpose 
+	/	Root directory
+	/bin	Essential binaries
+	/sbin	System binaries
+	/usr	User programs
+	/var	Variable data (logs, cache)
+	/etc	Configuration files
+	/home	User home directories
+	/root	Root user's home directory
+	/dev	Device files
+	/tmp	Temporary files
+	/mnt	Mounted filesystems
+	/media	Removable media
+	/opt	Optional software
+	/proc	Process information
+	/sys	System information
+	/lib	Libraries
+	/boot	Boot loader files
+	/run	Runtime data
+
+
+
+27. How would you troubleshoot a full file system on a Linux server?                                                                                     
+
+	When your Linux server’s file system is full, it can lead to performance issues, application crashes, and even system instability
+	
+	- Check the Disk Space Usage -                                                    - df -h
+	- Identify Large Files and Directories  -                                      - du -ah / | sort -rh | head -10
+	- Locate Recently Modified Files                                                 - find / -type f -mtime -5 -size +100M
+	- Check Inodes Usage                                                                    - df -i  (Even if the disk space is available, you can run out of inodes, preventing new files from being created.)
+	- Identify Open Files Using Deleted Space                                 - lsof | grep deleted
+	- Remove Unnecessary Log Files                                                  - find /var/log -name "*.log" -mtime +30 -exec rm -f {} \;
+	- Clear Cache and Temporary Files                                              - sudo apt-get clean, sudo yum clean all 
+	- Use ncdu for Better Visualization                                              - sudo apt install ncdu  /sudo yum install ncdu  ( The ncdu (NCurses Disk Usage) tool provides a graphical view of disk usage.)
+	- Use fstrim to Reclaim Space on SSDs                                       - sudo fstrim -av
+
+
+
+28. How would you monitor system performance and manage processes on a Linux server?
+
+	- Real-Time System Monitoring Tools                                         - top      (Displays a real-time view of the system’s resource usage. Shows CPU, memory, and process usage.)
+	- (Virtual Memory Statistics)                                                         - vmstat (Monitors system performance in terms of CPU, memory, and I/O.)
+		• vmstat 2 10        --> Displays performance stats every 2 seconds, 10 times.
+		
+	- (Input/Output Statistics)                                                             - iostat (Monitors disk I/O performance.)
+		• iostat -x 2 5  --> Displays extended disk stats every 2 seconds, 5 times.
+		
+	- (System Activity Reporter)                                                          - sar
+	- Displays a snapshot of running processes.                             - ps aux (or) ps -ef         (or) ps -u (to filter by username)
+	- System Load and Resource Monitoring                                    - uptime
+	- View System Logs                                                                         - tail -f 
+	 
+
+
+29. In Linux systems there is the term Load Average? what does that mean? how it is being calculated? and in what format the load average output is?
+
+	What is Load Average?
+	
+		• Load Average refers to the average number of processes that are Running (actively using the CPU) or Waiting for CPU time (in the run queue).
+	
+	How to View Load Average?
+	
+		You can check the load average using: 
+				□ uptime
+				□ top
+				□ cat /proc/loadavg
+			
+	How is Load Average Calculated?
+	
+		Linux calculates load average using exponential moving average (EMA).
+		At every minute interval, it considers the running processes + waiting processes and applies the formula: 
+		
+			• Load Average=(previous load) × decay+(new load) × (1 - decay)
+			• decay factor depends on the time period (1, 5, or 15 minutes).
+				Decay value:
+					• 1 min: e^(-1/1) ≈ 0.3679
+					• 5 min: e^(-1/5) ≈ 0.8187
+					• 15 min: e^(-1/15) ≈ 0.9355
+				
+30. You all must have tried ssh-keygen at-least once to generate ssh keys, Question is - What happens when you provide a password instead of using empty passphrase ?
+	
+	Answers:
+	
+		- for github every time while pushing we need to enter password
+		- You need to enter password every time when try to authenticate
+		
+		- I think If you give a password while using ssh-keygen, it locks the private key. You'll need to enter that password every time you use the key for SSH. This adds extra security.
+
+
+
+31. If you're facing performance issues on a server, how do you troubleshoot?
+
+		When a server experiences performance issues, you need to identify the root cause by analysing system metrics, running diagnostics, and applying fixes. Here’s a detailed step-by-step approach to troubleshoot and resolve performance problems.
+		
+		Step 1: Identify the Symptoms
+		First, determine the symptoms of the performance issue by asking the following questions:
+			• 🔹 Is the server slow to respond?
+			• 🔹 Are specific applications or services failing?
+			• 🔹 Is the CPU, memory, or disk usage unusually high?
+			• 🔹 Are there network bottlenecks or connection drops?
+			• 🔹 Is the server running out of disk space or encountering I/O issues?
+		
+		Step 2: Check System Resource Usage
+			1. CPU Utilization : Top 
+			2. Memory Usage -  free -m
+			3. Disk I/O Usage  - iostat -x 1 5
+			4. Network Activity  -  ifstat -i eth0 1 5  # Monitor network usage every second for 5 iterations
+			5. File System Usage  -  df -h
+			6. Identify High Resource-Consuming Processes  -  ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head
+			7. Find high memory-consuming processes  - ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+			8. Use strace for real-time process monitoring  --> strace -p <PID>
+			9. Check System Logs for Clues                 -->  dmesg | tail -50
+			10. Check Syslog and Authentication Logs           -->  tail -100 /var/log/syslog
+		
+		
+
+32. In Linux, how do you attach and detach a filesystem?
+
+		Attaching a Filesystem (Mounting) - In Linux, attaching a filesystem means mounting it to a specific directory, making it accessible to the system.
+				- mount <device> <mount_point>
+			
+				- <device> → The block device (e.g., /dev/sdb1).
+				- <mount_point> → The directory where the filesystem will be accessible.
+			
+		Steps:
+		1. Identify the Filesystem - lsblk
+		2. Create a Mount Point  -  sudo mkdir /mnt/data
+		3. Mount the Filesystem - sudo mount /dev/sdb1 /mnt/data
+		4. Verify the Mount           -  df -h
+	
+	
+	Detaching a Filesystem (Unmounting): Detaching a filesystem means unmounting it, making it inaccessible from the mount point.
+	
+		Steps:
+		1. Ensure No Processes Are Using the Filesystem    -  lsof +D /mnt/data
+		2. Unmount the Filesystem - sudo umount /mnt/data
+		3. Verify the Unmount  - mount | grep /mnt/data
+	
+	
+	
+	
+	
+33. How do you print the last 15 lines of a file in Linux?
+	
+		- tail -n 15 <filename>                  --> Using the tail Command → Most Common Way
+		- awk 'NR>=(NR-15)' <filename>       -->  You can use awk to print the last 15 lines by checking the line number.
+	
+	
+	
+	
+	
+34. How do you enable passwordless authentication between two servers?
+
+		Passwordless authentication uses SSH key-based authentication instead of passwords, allowing you to securely connect between two servers without being prompted for a password.
+	
+	Steps:
+	1. Generate SSH Key Pair                            - ssh-keygen -t rsa -b 4096
+	2. Copy the Public Key to Server B             - ssh-copy-id user@serverB
+									- user → Your username on Server B.
+									- serverB → The hostname or IP address of Server B.
+								
+	3. If ssh-copy-id is not available:
+			- cat ~/.ssh/id_rsa.pub | ssh user@serverB "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+		
+				- mkdir -p ~/.ssh → Creates the .ssh directory if it doesn’t exist.
+				- cat >> ~/.ssh/authorized_keys → Appends the public key to the authorized_keys file.
+			
+			
+	4. Test the Passwordless SSH Connection - ssh user@serverB
+
+
+
+35. UNIX vs LINUX: Key Differences:
+
+	Feature				UNIX									LINUX
+
+	Origin			Developed in the 1970s by AT&T Bell Labs				Inspired by UNIX, developed by Linus Torvalds in 1991
+	Cost			Commercial and expensive						Mostly free and open-source
+	Source Code		Proprietary (closed-source)						Open-source (GPL-licensed)
+	Distributions		Multiple commercial variants (AIX, HP-UX, Solaris)			Many distros (Ubuntu, Red Hat, CentOS, Arch, Debian)
+	Usage			Used in high-end servers, mainframes, and enterprise environments	Used in personal computers, servers, cloud, and embedded devices
+	File System		Different versions use different file systems (JFS, ZFS, etc.)		Uses EXT4, XFS, Btrfs, etc.
+	Hardware Support	Runs mostly on specialized and proprietary hardware			Runs on almost any hardware, from PCs to cloud servers
+	Security		Highly secure due to its commercial nature				Secure with frequent updates and community-driven security patches
+	Development Model	Developed by individual vendors						Community-driven development
+	Market Usage		Large enterprises, banks, and government systems			Web servers, personal computing, cloud environments, mobile (Android)
+	
+	
+36. What is an Inode in Linux?
+
+	An inode (index node) is a data structure in Linux and Unix filesystems that stores metadata about a file or directory. Every file has a unique inode number assigned to it.
+	
+			An inode does NOT store the filename or file data, but it holds metadata such as: 
+			✅ File type (regular file, directory, symbolic link, etc.)
+			✅ Permissions (read, write, execute)
+			✅ Owner (UID) and Group (GID)
+			✅ File size
+			✅ Number of hard links
+			✅ Timestamps (created, modified, accessed)
+			✅ Pointers to disk blocks storing the actual file data
+			
+				- ls -i filename               --> Check the inode number of a file:
